@@ -52,12 +52,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+//sum and multiply are fuctions
+//var sum2 = sum(a,b)
+//sum2 ruturns [11,.......]
+//sum3 = sum2[0] = 11
+//var sum4 = sum(sum3,5);
+//sum4 returns [16, .....]
+//var sum5 = sum4[0]
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var sum2 = sum(a,b)[0];
+  sum2 = sum(sum2,c)[0];
+  var multiply2 = multiply(a,b)[0];
+  multiply2 = multiply(multiply2,c)[0];
+  return [sum2, multiply2, a + ' and ' + b + ' and ' + c + ' sum to ' + sum2 + '.' , 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply2 + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
